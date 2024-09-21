@@ -7,11 +7,6 @@ function playAudio(buttonId) {
   if (audio) {
     audio.play();
   }
-
-  const button = document.getElementById(buttonId);
-  if (button) {
-    button.style.backgroundColor = "rgb(74, 90, 120)"; // Change to desired color
-  }
 }
 
 // Attach event listeners to buttons
