@@ -23,11 +23,12 @@ function playAudio(buttonId) {
     statusText.textContent = `Playing ${buttonId}...`;
     audio.play();
     currentAudio = audio;
-    currentAudio.addEventListener(
-      "ended",
-      () => (statusText.textContent = "---")
-    );
+    currentAudio.addEventListener("ended", onAudioEnded);
   }
+}
+
+function onAudioEnded() {
+  statusText.textContent = "---";
 }
 
 // Attach event listeners to buttons
